@@ -18,7 +18,7 @@ namespace YourNameSpace
 
             try
             {
-                if (!string.IsNullOrEmpty(To) && !string.IsNullOrEmpty(From) && !string.IsNullOrEmpty(Pass)) && !string.IsNullOrEmpty(To)
+                if (!string.IsNullOrEmpty(To) && !string.IsNullOrEmpty(From) && !string.IsNullOrEmpty(Pass)) && !string.IsNullOrEmpty(Subject)
                 {
                     smtpServer.Host = "smtp.gmail.com";               
                     smtpServer.Port = 587;
