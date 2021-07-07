@@ -10,7 +10,7 @@ namespace YourNameSpace
 
     public class EmailSender
     {     
-        public bool SendEmail(string From, string To, string Pass, string Subject, string Body)
+        public EmailResult SendEmail(string From, string To, string Pass, string Subject, string Body)
         {
             SmtpClient smtpServer = new SmtpClient();
             MailMessage mail = new MailMessage();
@@ -28,7 +28,7 @@ namespace YourNameSpace
                     smtpServer.Credentials = new System.Net.NetworkCredential(From, Pass);
 
                     mail = new MailMessage();
-                    mail.From = new MailAddress(this.From);
+                    mail.From = new MailAddress(From);
                     mail.To.Add(To);                   
                     mail.Subject = Subject;
                     mail.Body = Body + "<br /><br /><b>Este mensaje fue generado por un sistema automatizado. Por favor, no respondas a este mensaje.</b>";
